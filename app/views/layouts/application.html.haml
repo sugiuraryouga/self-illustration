@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SelfDrill
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__logo
+        =link_to "/","self-drill"
+      .header__search
+        .header__right__search
+          インクルメンタルサーチpost検索
+      .header__right 
+      
+
+        .header__right__contents
+          =link_to "#" do
+            新規登録
+
+    = yield
